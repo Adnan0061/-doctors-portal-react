@@ -13,6 +13,7 @@ import { Button, Container } from '@mui/material';
 import AppoinmentsDashBoard from './AppoinmentsDashBoard/AppoinmentsDashBoard';
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import MakeAdmin from './MakeAdmin/MakeAdmin';
+import AddDoctor from './AddDoctor/AddDoctor';
 import useAuth from '../../hooks/useAuth';
 import AdminRoute from '../Login/Login/AdminRoute/AdminRoute';
 import Payment from './Payment/Payment';
@@ -36,11 +37,11 @@ function DashBoard(props) {
       <Toolbar />
       <Divider />
 
-        <Link sx={{textDecoration:'none'}} to={`${url}`}><Button sx={{ color:'black', textDecoration:'none'}}>DashBoard</Button></Link>
+        <Link style={{textDecoration:'none'}} to={`${url}`}><Button sx={{ color:'black', textDecoration:'none'}}>DashBoard</Button></Link>
 
-        {isAdmin.admin && <Link sx={{textDecoration:'none'}} to={`${url}/make-admin`}><Button sx={{textDecoration:'none', color:'black'}}>Make Admin</Button></Link>}
+        {isAdmin.admin && <Link style={{textDecoration:'none'}} to={`${url}/make-admin`}><Button sx={{textDecoration:'none', color:'black'}}>Make Admin</Button></Link>}
 
-        {isAdmin.admin && <Link sx={{textDecoration:'none'}} to={`${url}/add-doctor`}><Button sx={{textDecoration:'none', color:'black'}}>Add Doctor</Button></Link>}
+        {isAdmin.admin && <Link style={{textDecoration:'none'}} to={`${url}/add-doctor`}><Button sx={{textDecoration:'none', color:'black'}}>Add Doctor</Button></Link>}
 
     </div>
   );
@@ -124,6 +125,9 @@ function DashBoard(props) {
                 </Route>
                 <AdminRoute path={`${path}/make-admin`}>
                     <MakeAdmin/>
+                </AdminRoute>
+                <AdminRoute path={`${path}/add-doctor`}>
+                    <AddDoctor/>
                 </AdminRoute>
             </Switch>
         </Container>

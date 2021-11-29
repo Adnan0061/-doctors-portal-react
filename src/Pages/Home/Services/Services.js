@@ -29,8 +29,8 @@ const Services = () => {
     return (
         <Box sx={{ flexGrow: 1, my: 10 }}>
         <Container>
-            <Typography sx={{ fontWeight: 400, color: '#5FC7C7' }} variant='h4' component='div'>Our Services</Typography>
-            <Typography sx={{ fontWeight: 500, mt: 2, mb: 10 }} variant='h2' component='div'>Services We Provide</Typography>
+            <Typography sx={{ fontWeight: 400, color: '#5FC7C7', textAlign: 'center' }} variant='h4' component='div'>Our Services</Typography>
+            <Typography sx={{ fontWeight: 500, mt: 2, mb: 10, textAlign: 'center' }} variant='h2' component='div'>Services We Provide</Typography>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 4, md: 12 }}>
                 {services.map((service, index) => (
                 <Grid item xs={4} sm={4} md={4} key={index}>

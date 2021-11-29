@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import Appointment from "./Pages/Appointment/Appointment/Appointment";
 import DashBoard from "./Pages/DashBoard/DashBoard";
+import DoctorsAll from "./Pages/DoctorsAll/DoctorsAll";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login/Login";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
@@ -23,6 +24,9 @@ function App() {
           <PrivateRoute path="/appointment">
             <Appointment/>
           </PrivateRoute>
+          <Route path="/all-doctors">
+            <DoctorsAll/>
+          </Route>
           <PrivateRoute path="/dashboard">
             <DashBoard />
           </PrivateRoute>
